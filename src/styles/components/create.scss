@@ -1,0 +1,49 @@
+.ct-create {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    *,
+    *:after,
+    *::before {
+        box-sizing: inherit;
+    }
+    /* @include displayFlex;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 100px;
+    //justify-content: center;
+    margin-left: 33%;
+    margin-top: 4%;
+    width: 500px;
+    height: 240px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.25));
+    background-color: $colorCard;
+ */
+}
+input [type="text"]{
+    width: 100px;
+    border: thin solid #dedede;
+    border-radius: 0,25rem;
+    padding: 0,75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+
+}
+/* button,
+input [type="submit"],
+input [type="reset"]{
+    width: px;
+    border: thin solid #444;
+    border-radius: 0,25rem;
+    padding: 0,5rem 1rem;
+    margin: 0 0.5rem 0 0;
+    outline: none;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+
+} */

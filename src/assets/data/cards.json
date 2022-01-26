@@ -1,0 +1,28 @@
+{
+    "cards": [{
+        "id": 1,
+        "imgName": "Beach",
+        "imgUser": "Noelia",
+        "imgURL": "beach"
+
+    },
+    {
+        "id": 2,
+        "imgName": "Mountain",
+        "imgUser": "Noelia",
+        "imgURL": "mountain"
+    },
+    {
+        "id": 3,
+        "imgName": "City",
+        "imgUser": "Noelia",
+        "imgURL": "city"
+    },
+    {
+        "id": 4,
+        "imgName": "Town",
+        "imgUser": "Noelia",
+        "imgURL": "Landscape"
+    }
+]
+}
