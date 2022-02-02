@@ -1,0 +1,16 @@
+{
+    "fcards": [{
+    "id": 1,
+    "imgName": "Beach",
+    "imgUser": "Noelia",
+    "imgURL": "beach"
+
+},
+{
+    "id": 2,
+    "imgName": "Mountain",
+    "imgUser": "Raquel",
+    "imgURL": "mountain"
+}
+]
+}
