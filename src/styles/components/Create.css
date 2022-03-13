@@ -1,0 +1,20 @@
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center; 
+}
+
+.form{
+    margin-left: 35%;
+}
+
+.button {
+    margin-top: 2%;
+    
+}
+
+.input{
+    width: 40%;
+}

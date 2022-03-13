@@ -45,8 +45,8 @@ const CreateForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
         setDataToEdit(null);
     }
     
-    return <div>
-        <h3>{dataToEdit ? "Editar" : "Agregar"} </h3>
+    return <div className="form">
+        <h3>{dataToEdit ? "Editar" : "Añadir"} </h3>
         <form onSubmit={handleSubmit}>
             <input 
             className="input"
@@ -65,8 +65,8 @@ const CreateForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
             onChange={handleChange} 
             value={form.imgUser} />
         </form>
-            <input type="submit" value="Submit" onClick={handleSubmit} />
-            <input type="reset" value="Reset" onClick={handleReset} />
+            <input className="button" type="submit" value="Submit" onClick={handleSubmit} />
+            <input className="button" type="reset" value="Reset" onClick={handleReset} />
     </div>;
     
 };

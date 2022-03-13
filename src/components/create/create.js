@@ -6,6 +6,7 @@ import '../../styles/components/create.scss';
 import { helpersHttp } from "../helpers/helpersHttp";
 import Loader from "./Loader";
 import Message from "./Message";
+import '../../styles/components/Create.css'
 
 
 
@@ -20,7 +21,7 @@ const Create = () => {
 
     useEffect(() => {
         setLoading(true);
-        api.get(url).then((res) => {
+        helpersHttp().get(url).then((res) => {
             //console.log(res);
             if(!res.err) {
                 setDb(res);
@@ -31,17 +32,43 @@ const Create = () => {
             }
             setLoading(false);
         });
-    },[]);
+    },[url]);
 
     const createData = (data) => {
         //console.log(data);
         data.id = Date.now();
+
+        let options = {body: data,
+            headers: {"content-type": "application/json"},};
+
+        api.post(url, options).then((res)=> {
+            //console.log(res);
+            if(!res.err) {
+                setDb([...db, res]);
+            }else {
+                setError(res);
+            }
+        })
         setDb([...db, data]);
     };
 
     const updateData = (data) => {
-        let newData = db.map((el)=>(el.id === data.id ? data:el));
-        setDb(newData);
+        let endpoint = `${url}/${data.id}`
+        //console.log(endpoint);
+        let options = {body: data,
+            headers: {"content-type": "application/json"},};
+
+            api.put(endpoint, options).then((res)=> {
+                //console.log(res);
+                if(!res.err) {
+                    let newData = db.map((el)=>(el.id === data.id ? data:el));
+                    setDb(newData);
+                }else {
+                    setError(res);
+                }
+            })
+        
+        
     };
 
     const deleteData = (id) => {
@@ -58,7 +85,7 @@ const Create = () => {
     return(
         <div>
             <Navbar txtColor="txtColor2" />
-            <h2>CREATE</h2>
+            <h2></h2>
         
         
         <div className="ct-create">
@@ -70,7 +97,7 @@ const Create = () => {
             setDataToEdit = {setDataToEdit} 
             />
             {loading&& <Loader/>}
-            {error && <Message/>}
+            {/* {error && <Message/>} */}
              {db && (
              <CreateTable 
              data={db}
@@ -78,8 +105,6 @@ const Create = () => {
              deleteData={deleteData} 
              />
              )}
-             {/* <Loader/>
-             <Message/> */}
              </article>
         </div>
         </div>

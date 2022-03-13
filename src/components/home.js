@@ -13,7 +13,9 @@ class Home extends Component{
         return (
             <div>
                 <Navbar txtColor="txtColor1" />
+                <div>
                 <Carrusel/>
+                </div>
                 <h1 className="txt-title">Destination</h1>
                 <Cards data={this.state.cards}/>
             </div>
