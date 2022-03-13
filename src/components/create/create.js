@@ -72,14 +72,19 @@ const Create = () => {
     };
 
     const deleteData = (id) => {
-        let isDelete = window.confirm(`¿Estás seguro de eliminar?`);
+        let endpoint = `${url}/${id}`
+        let options = {
+            headers: {"content-type": "application/json"},};
 
-        if (isDelete) {
-            let newData = db.filter(el => el.id !== id);
+        let isDelete = window.confirm(`¿Estás seguro de eliminar?`);
+        api.del(endpoint, options).then( res => {
+            if(!res.err) {
+                let newData = db.filter(el => el.id !== id);
             setDb(newData);
-        }else{
-            return;
-        }
+            }else {
+                setError(res);
+            }
+        })
     };
 
     return(

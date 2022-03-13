@@ -8,18 +8,15 @@ const CreateTable = ({data, setDataToEdit, deleteData}) => {
            <table>
            <thead>
            <tr>
-            <th>Nombre de la imagen</th>
-            <th>Nombre</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Imagen</th>
             <th>Acciones</th>
           </tr>
             </thead>
             <tbody>
-            {data.length === 0 ?(
-                <tr>
-                    <td colSpan="3">Sin datos</td>
-                </tr>
-                ):(
-                    data.map((el) => (
+            {data.length > 0 ?(
+                data.map((el) => (
                     <CreateTableRow 
                     key={el.id} 
                     el={el}
@@ -27,6 +24,10 @@ const CreateTable = ({data, setDataToEdit, deleteData}) => {
                     deleteData={deleteData}
                     />
                     ))
+                ):(
+                    <tr>
+                    <td colSpan="3">Sin datos</td>
+                </tr>  
                 )}
             </tbody>
             </table>
