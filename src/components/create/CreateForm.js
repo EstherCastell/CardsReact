@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 const initialForm ={
     imgName:"",
     imgUser:"",
-    imgUrl:"",
+    imgURL:"",
     id:null,
 };
 
@@ -28,7 +28,7 @@ const CreateForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!form.imgName || !form.imgUser || !form.imgUrl) {
+        if (!form.imgName || !form.imgUser || !form.imgURL) {
             alert("Datos incompletos");
             return;
         }
@@ -70,10 +70,10 @@ const CreateForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
             <input 
             className="input" 
             type="text" 
-            name="imgUrl" 
+            name="imgURL" 
             placeholder="imgUrl" 
             onChange={handleChange} 
-            value={form.imgUrl} />
+            value={form.imgURL} />
         </form>
             <input className="button" type="submit" value="Submit" onClick={handleSubmit} />
             <input className="button" type="reset" value="Reset" onClick={handleReset} />

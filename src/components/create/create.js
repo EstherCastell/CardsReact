@@ -17,7 +17,7 @@ const Create = () => {
     const [loading, setLoading] = useState(false);
 
     let api = helpersHttp();
-    let url = "http://localhost:5000/fcards";
+    let url = "http://localhost:5000/cards";
 
     useEffect(() => {
         setLoading(true);
