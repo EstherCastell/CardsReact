@@ -47,8 +47,8 @@ const CreateForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     }
     
     return <div className="form">
-        <h3>{dataToEdit ? "Editar" : "Añadir"} </h3>
-        <form onSubmit={handleSubmit}>
+        <h3 className="card-title">{dataToEdit ? "Editar" : "Añadir"} </h3>
+        <form className="form-group" onSubmit={handleSubmit}>
             <input 
             className="input"
             type="text" 

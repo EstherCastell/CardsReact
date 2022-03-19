@@ -5,10 +5,10 @@
 .ct-cards {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 400px;
+    grid-template-rows: 350px;
     gap: 1rem;
     justify-content: center;
-    margin: 1rerm;
+    margin: 1rem;
     margin-top: 5%;
 }
 
@@ -35,7 +35,8 @@
     @include displayFlex();
     width: 300px;
     height: 50px;
-    background-color: $colorCard;
+    background: rgb(174,238,228);
+    background: radial-gradient(circle, rgba(174,238,228,1) 0%, rgba(148,187,233,1) 100%);
     flex-wrap: wrap;
 }
 

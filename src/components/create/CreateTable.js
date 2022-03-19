@@ -4,7 +4,7 @@ import CreateTableRow from './CreateTableRow';
 const CreateTable = ({data, setDataToEdit, deleteData}) => {
     return(
        <div>
-           <h3>Tabla de datos</h3>
+           <h3>List</h3>
            <table>
            <thead>
            <tr>

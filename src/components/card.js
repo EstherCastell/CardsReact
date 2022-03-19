@@ -21,7 +21,7 @@ class Card extends Component{
                                 <a className="bt-ico" href="/beach"><img className="img-ico" src= {eye} alt= "show button"/></a>          
                             </div>
                             <div className="ct-icons-modify">
-                            <button className="bt-ico"><img className="img-ico" src= {edit} alt= "edit button"/></button>
+                            <a className="bt-ico" href="/create"><img className="img-ico" src= {edit} alt= "edit button"/></a>
                             <button className="bt-ico"><img className="img-ico" src= {del} alt= "delete button"/></button>
                             </div>
                         </div>

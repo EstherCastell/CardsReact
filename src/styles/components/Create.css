@@ -3,18 +3,37 @@ body {
     font-size: 16px;
     font-family: sans-serif;
     display: flex;
-    justify-content: center; 
+
 }
 
 .form{
-    margin-left: 35%;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    color: #125d98;
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding-top: 2%;
+
 }
+.card-title {
+    margin-top: 10px;
+    text-align: center;
+  }
 
 .button {
     margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    cursor: pointer;
     
 }
 
 .input{
-    width: 40%;
+    width: 50%;
+    margin: 8px 0;
+    margin-left: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }

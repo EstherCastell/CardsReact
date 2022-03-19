@@ -7,7 +7,7 @@ class Navbar extends Component{
         return (
             <div class="ct-header">
                 <Link to= "/"><img className="img-logo" src={ logo } alt="logo"/></Link>
-                <Link to="/create" className={ this.props.txtColor }>CREATE</Link>
+                <Link to="/create" className={ this.props.txtColor }>Create / Edit</Link>
             </div>
         )
     }

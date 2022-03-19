@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import CreateTable from "./CreateTable";
 import CreateForm from "./CreateForm";
 import Navbar from "../navbar";
-import '../../styles/components/create.scss';
+//import '../../styles/components/create.scss';
 import { helpersHttp } from "../helpers/helpersHttp";
 import Loader from "./Loader";
 import Message from "./Message";
@@ -93,7 +93,7 @@ const Create = () => {
             <h2></h2>
         
         
-        <div className="ct-create">
+        <div className="ct-form-create">
             <article className="ct-create">
             <CreateForm 
             createData={createData} 
